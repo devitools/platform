@@ -1,0 +1,6 @@
+[submodule "frontend/@devitools"]
+	path = frontend/@devitools
+	url = https://github.com/devitools/quasar
+[submodule "backend/@devitools"]
+	path = backend/@devitools
+	url = https://github.com/devitools/laravel
