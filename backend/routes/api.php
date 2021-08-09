@@ -19,6 +19,7 @@ use Devitools\Http\Routing\Router;
 Router::prefix('v1')->group(static function () {
     Router::group([], __DIR__ . '/api/auth.php');
     Router::group([], __DIR__ . '/api/admin.php');
+    Router::group([], __DIR__ . '/api/main.php');
 });
 
 Router::get('/statics/version', fn() => file_get_contents(__DIR__ . '/../public/statics/version'));
