@@ -2,6 +2,7 @@ import { actionEntry, actionGroup } from '@devitools/Security/actions'
 import { getAllowedMenuEntries } from 'src/settings/security'
 
 import * as admin from 'src/menu/admin'
+import * as main from 'src/menu/main'
 
 /**
  * @param {Record<string, unknown>|undefined} session
@@ -21,7 +22,9 @@ export default function (session) {
 
   const actions = [
     actionEntry('home', '/dashboard/home', 'home', 'home'),
+    actionGroup(main),
     actionGroup(admin)
+
   ]
 
   return getAllowedMenuEntries(actions)

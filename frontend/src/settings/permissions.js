@@ -1,13 +1,15 @@
 import { permissionGroup } from '@devitools/Security/permissions'
 
 import * as admin from 'src/permission/admin'
+import * as main from 'src/permission/main'
 
 /**
  * @type {*}
  */
 export const permissions = [
   permissionGroup('all', 'ballot', [
-    permissionGroup(admin)
+    permissionGroup(admin),
+    permissionGroup(main)
   ])
 ]
 

@@ -8,6 +8,7 @@ import { index, layout } from 'source/modules/Dashboard/components'
 // routes
 import admin from './dashboard/admin'
 import settings from './dashboard/settings'
+import main from './dashboard/main'
 
 /**
  * @type {string}
@@ -27,6 +28,7 @@ export default ($router) => {
     group.redirect('', dashboard)
 
     group.route(dashboard, index, { name: 'dashboard' })
+    main(group)
     admin(group)
     settings(group)
   })
