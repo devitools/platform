@@ -1,6 +1,6 @@
 import { checkSession, checkIsAlreadyConnected, checkPermission } from 'source/modules/Auth/router/middleware'
 import { otherwise } from 'src/router'
-import { signIn, recoverPassword, layout } from 'source/modules/Auth/components'
+import { signIn, signUp, recoverPassword, layout } from 'source/modules/Auth/components'
 import { checkModified } from 'source/modules/General/router/middleware'
 /**
  * @param {AppRouter} $router
@@ -8,6 +8,7 @@ import { checkModified } from 'source/modules/General/router/middleware'
 export default ($router) => {
   $router.group(otherwise, layout, (group) => {
     group.route('', signIn, { name: 'sign-in', public: true })
+    group.route('/sign-up', signUp, { name: 'sign-up', public: true })
     group.route('/recover-password', recoverPassword, { name: 'recover-password', public: true })
   })
 

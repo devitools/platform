@@ -44,5 +44,13 @@ export default class ProfileSchema extends Schema {
       .fieldTableWhere()
       .fieldFormWidth(54)
       .validationRequired()
+
+    this.addField('default')
+      .fieldIsToggle()
+      .fieldTableShow()
+      .fieldTableWhere()
+      .fieldFormDefaultValue(false)
+      .fieldFormWidth(54)
+      .validationRequired()
   }
 }

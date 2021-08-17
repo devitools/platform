@@ -18,4 +18,20 @@ class ProfileRepository extends Repository
      * @var string
      */
     protected string $prototype = Profile::class;
+
+
+    public function getDefault() :?string
+    {
+        /** @var Profile $profile */
+        $profile = $this->model->newQuery()
+            ->where('default', true)
+            ->first();
+
+        if ($profile){
+            return null;
+        }
+
+        return (string) $profile->getPrimaryKeyValue();
+
+    }
 }

@@ -72,6 +72,10 @@ class Profile extends Schema implements ProfileInterface
         $this->addField('reference')
             ->validationRequired();
 
+        $this->addField('default')
+            ->isBoolean()
+            ->validationRequired();
+
         $this->addField('permissions')
             ->isTree(Permission::class, 'profileId', static function ($data) {
                 if (is_array($data)) {

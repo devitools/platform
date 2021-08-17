@@ -32,6 +32,10 @@ export const fields = {
         label: 'Usuário'
       }
     ]
+  },
+  default: {
+    label: 'Perfil Padrão',
+    tooltip: 'Indica que este será o perfil padrão a ser atribuído a novos usuários'
   }
 }
 

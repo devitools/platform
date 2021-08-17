@@ -7,10 +7,12 @@ use App\Http\Controllers\Auth\Me;
 use App\Http\Controllers\Auth\Recover;
 use App\Http\Controllers\Auth\Refresh;
 use App\Http\Controllers\Auth\SignIn;
+use App\Http\Controllers\Auth\SignUp;
 use App\Http\Controllers\Auth\Update;
 use Devitools\Http\Routing\Router;
 
 Router::post('/auth/sign-in', SignIn::class);
+Router::post('/auth/sign-up', SignUp::class);
 Router::post('/auth/recover', Recover::class);
 Router::post('/auth/change', Change::class);
 

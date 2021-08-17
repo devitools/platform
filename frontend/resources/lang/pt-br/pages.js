@@ -26,6 +26,17 @@ export default {
       error: 'Verifique os dados e tente novamente!',
       errorRecaptcha: 'Favor preencher o captcha'
     },
+    signUp: {
+      title: 'Cadastre-se',
+      name: 'Nome Completo',
+      email: 'Email',
+      password: 'Senha',
+      passwordConfirm: 'Confirme a Senha',
+      button: 'Cadastrar',
+      error: 'Verifique os dados e tente novamente!',
+      wrongPassword: 'A Confirmação Difere da Senha Digitada!',
+      errorRecaptcha: 'Favor preencher o captcha'
+    },
     forgotPassword: {
       title: 'Recuperação de Senha',
       titleRecovering: 'Digite o código enviado no seu e-mail',

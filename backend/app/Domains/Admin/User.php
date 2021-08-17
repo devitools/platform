@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace App\Domains\Admin;
 
+use App\Domains\Admin\User\UserEventCreating;
 use App\Domains\Admin\User\UserEventSaving;
 use Devitools\Agnostic\Schema;
 
@@ -40,8 +41,7 @@ class User extends Schema
     public function construct(): void
     {
         $this->addField('profileId')
-            ->isSelectRemote(Profile::class, 'profile')
-            ->validationRequired();
+            ->isSelectRemote(Profile::class, 'profile');
 
         $this->addField('name')
             ->validationRequired();
@@ -61,6 +61,9 @@ class User extends Schema
 
         $this->addField('phone');
 
+
+        $this->addEvent('creating', UserEventCreating::class);
         $this->addEvent('saving', UserEventSaving::class);
+
     }
 }
